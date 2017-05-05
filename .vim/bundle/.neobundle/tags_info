@@ -3,5 +3,6 @@ neobundle.vim
 neomru.vim
 open-browser.vim
 previm
+pukivim
 unite.vim
 vim-markdown

@@ -160,6 +160,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " Refer to |:NeoBundle-examples|.
 " Note: You don't set neobundle setting in .gvimrc!
 
+" add plugin
+"for pukivim
+NeoBundle 'h141dev/pukivim'
+
 "for 
 NeoBundle 'Shougo/neomru.vim'
 
