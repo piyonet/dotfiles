@@ -1,14 +1,14 @@
 
-# $B"#(B Requirement:
+# ■ Requirement:
 
 - NeoBundle:
-  - plugin$B$N%@%&%s%m!<%I(B:  
-  Windows$B!'(B
+  - pluginのダウンロード:  
+  Windows：
 ```Bash
 mkdir -p ~/.vim/bundle
 git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
-  Linux$B!'(B
+  Linux：
 ```Bash
 curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > install.sh
 sh ./install.sh
@@ -16,35 +16,35 @@ rm -rf install.sh
 ```
 
 - CTags:
-  - $B30It%D!<%k$N%$%s%9%H!<%k(B:  
+  - 外部ツールのインストール:  
 ```Bash
 $ sudo apt-get install exuberant-ctags
 ```
 
-# $B"#(B Markdown memo:
+# ■ Markdown memo:
 
-### $B!&(B $B8+=P$7(B/$B2U>r=q$-(B/$BHV9fIU$-%j%9%H(B
-  * $B5-9f$N$"$H$OH>3Q%9%Z!<%9$r6u$1$k(B.
+### ・ 見出し/箇条書き/番号付きリスト
+  * 記号のあとは半角スペースを空ける.
 ```
- # $B8+=P$7(B
- - $B2U>r=q$-(B
- 1. $BHV9fIU$-%j%9%H(B
+ # 見出し
+ - 箇条書き
+ 1. 番号付きリスト
 ```
 
-### $B!&(B code$BI=5-(B
-  * $B%P%C%/%/%)!<%H$G3g$k(B.
+### ・ code表記
+  * バッククォートで括る.
 ```
-$B$3$l$,(B `$BI=5-Nc(B` $B$G$9(B
+これが `表記例` です
 ```
-$BI=<(Nc(B:
-> $B$3$l$,(B `$BI=5-Nc(B` $B$G$9(B
+表示例:
+> これが `表記例` です
 
-### $B!&(B pre$BI=5-(B
-  - $B2<5-$N$$$:$l$+(B
-    - $BA08e$r;0O"%P%C%/%/%*!<%H(B` ``` ` $B$G0O$&(B.
-    - $B9TF,$K(B4$B$D0J>e$NH>3Q%9%Z!<%9$r$D$1$k(B.
-    -  $B9TF,$K(B1$B$D0J>e$N%?%V$r$D$1$k(B.
-  - ` ```python` $B$N$h$&$K=q$$$F%7%s%?%C%/%9%O%$%i%$%H$N=q<0$r;XDj$G$-$k(B.
+### ・ pre表記
+  - 下記のいずれか
+    - 前後を三連バッククオート` ``` ` で囲う.
+    - 行頭に4つ以上の半角スペースをつける.
+    -  行頭に1つ以上のタブをつける.
+  - ` ```python` のように書いてシンタックスハイライトの書式を指定できる.
   - Bash, C#(cs), C++(cpp), CSS, Diff, HTML, XML, Ini, Java, Javascript, PHP, Perl, Python, Ruby, SQL, 1C, AVR Assembler(avrasm), Apache, Axapta, CMake, DOS .bat(dos), Delphi, Django, Erlang, Erlang, REPL, Go, Haskell, Lisp, Lua, MEL, Nginx, Objective C(objectivec), Parser3, Python, profile, Scala, Smalltalk, TeX, VBScript, VHDL, Vala
 
  <pre>
@@ -54,34 +54,34 @@ def sum(x, y):
 ```
 </pre>
 
- $BI=<(Nc(B:
+ 表示例:
 ```python
 def sum(x, y):
     return x + y
 ```
 
-### $B!&(B $B6/D4I=5-(B
-  - $B%"%9%?%j%9%/$H%A%k%@$r;H$&(B.
+### ・ 強調表記
+  - アスタリスクとチルダを使う.
 ```
-$B$3$l$,(B*$B%$%?%j%C%/(B*$B$G$9(B
-$B$3$l$,(B**$BB@;z(B**$B$G$9(B
-$B$3$l$,(B ~~$B<h$j>C$7@~(B~~ $B$G$9(B
+これが*イタリック*です
+これが**太字**です
+これが ~~取り消し線~~ です
 ```
-$BI=<(Nc(B:
-> $B$3$l$,(B*$B%$%?%j%C%/(B*$B$G$9(B  
-> $B$3$l$,(B**$BB@;z(B**$B$G$9(B  
-> $B$3$l$,(B ~~$B<h$j>C$7@~(B~~ $B$G$9(B 
+表示例:
+> これが*イタリック*です  
+> これが**太字**です  
+> これが ~~取り消し線~~ です 
 
-### $B!&(B $B?eJ?@~(B
-  - $B%"%9%?%j%9%/!"%"%s%@!<%P!<(B,$B%O%$%U%s$r(B3$B$DJB$Y$k(B.
+### ・ 水平線
+  - アスタリスク、アンダーバー,ハイフンを3つ並べる.
 ```
  ***
  ___
  ----
 ```
 
-### $B!&(B GFM:$BI=AH$_(B
-$B5-=RNc(B
+### ・ GFM:表組み
+記述例
 ```
 |header1|header2|header3|
 |:--|--:|:--:|
@@ -89,70 +89,70 @@ def sum(x, y):
 |a|b|c|
 ```
 
- - html$B$G$b5-=R2DG=(B
+ - htmlでも記述可能
 
     ```html
     <table border=4 width=250 align=center>
-      <caption>$B!Z%F!<%V%k$NNc![(B</caption>
+      <caption>【テーブルの例】</caption>
       <tr align=center>
        <th><br></th>
-       <th>$BNs(B-A</th>
-       <th>$BNs(B-B</th>
+       <th>列-A</th>
+       <th>列-B</th>
       </tr>
       <tr align=center>
-       <td>$B9T(B-1</td>
+       <td>行-1</td>
        <td>A1</td>
        <td>B1</td>
       </tr>
     </table>
     ```
 
- $BI=<(Nc(B:
+ 表示例:
 <table border=4 width=250 align=center>
- <caption>$B!Z%F!<%V%k$NNc![(B</caption>
+ <caption>【テーブルの例】</caption>
  <tr align=center>
   <th><br></th>
-  <th>$BNs(B-A</th>
-  <th>$BNs(B-B</th>
+  <th>列-A</th>
+  <th>列-B</th>
  </tr>
  <tr align=center>
-  <td>$B9T(B-1</td>
+  <td>行-1</td>
   <td>A1</td>
   <td>B1</td>
  </tr>
 </table>
 
-### $B!&(B $B%j%s%/(B
-  - `[$BI=<(J8;z(B]($B%j%s%/(BURL)`$B7A<0$G%j%s%/$r5-=R$9$k(B.
+### ・ リンク
+  - `[表示文字](リンクURL)`形式でリンクを記述する.
 ```
-[Google$B@h@8(B](https://www.google.co.jp/)
+[Google先生](https://www.google.co.jp/)
 ```
-  $BI=<(Nc(B:
-> [Google$B@h@8(B](https://www.google.co.jp/)
+  表示例:
+> [Google先生](https://www.google.co.jp/)
 
-### $B!&(B $BDj5A;2>H%j%s%/(B
-  - $BF1$8%j%s%/$N;2>H$r2?EY$bMxMQ$9$k>l9g$O!"%j%s%/@h$X$N;2>H$rDj5A$9$k$3$H$,$G$-$k(B.
-  - `[ID]:URL` $B$GDj5A$7!"(B`[$B%i%Y%k(B][ID]` $B$G;2>H$9$k(B.  
-  - $B%j%s%/$NDj5A$O(B`[ID]: URL "$B%j%s%/$N%D!<%k%A%C%WJ8;zNs(B"` $B$H$$$&=q<0$b2DG=(B.
+### ・ 定義参照リンク
+  - 同じリンクの参照を何度も利用する場合は、リンク先への参照を定義することができる.
+  - `[ID]:URL` で定義し、`[ラベル][ID]` で参照する.  
+  - リンクの定義は`[ID]: URL "リンクのツールチップ文字列"` という書式も可能.
 
 ```
-[$B$3$C$A$+$i(Bgoogle][google]  
-$B$=$NB>$NJ8>O(B  
-[$B$3$C$A$+$i$b(Bgoogle][google]  
+[こっちからgoogle][google]  
+その他の文章  
+[こっちからもgoogle][google]  
 
 [google]:http://www.google.com/ "aiueo"
 ```
 
-  $BI=<(Nc(B:
-> [$B$3$C$A$+$i(Bgoogle][google]  
-$B$=$NB>$NJ8>O(B  
-[$B$3$C$A$+$i$b(Bgoogle][google]  
+  表示例:
+> [こっちからgoogle][google]  
+その他の文章  
+[こっちからもgoogle][google]  
 
 [google]:http://www.google.com/
 
 
 
-# $B"#(B Vim basic memo:
+# ■ Vim basic memo:
 
 ## Jump point
 Ctrl+i : next
@@ -161,13 +161,13 @@ Ctrl+o : prev
 
 ## key mapping command
 
-|$B%b!<%I(B|$B:F3dEvL5$7(B|$B:F3dEvM-$j(B|
+|モード|再割当無し|再割当有り|
 |:-----------|------------:|:------------:|
-|$B%N!<%^%k%b!<%I!\%S%8%e%"%k%b!<%I(B|noremap|map|
-|$B%3%^%s%I%i%$%s%b!<%I!\%$%s%5!<%H%b!<%I(B|noremap!|map!|
-|$B%N!<%^%k%b!<%I(B|nnoremap|nmap|
-|$B%S%8%e%"%k(B($BA*Br(B)$B%b!<%I(B|vnoremap|vmap|
-|$B%3%^%s%I%i%$%s%b!<%I(B|cnoremap|cmap|
-|$B%$%s%5!<%H(B($BA^F~(B)$B%b!<%I(B|inoremap|imap|
+|ノーマルモード＋ビジュアルモード|noremap|map|
+|コマンドラインモード＋インサートモード|noremap!|map!|
+|ノーマルモード|nnoremap|nmap|
+|ビジュアル(選択)モード|vnoremap|vmap|
+|コマンドラインモード|cnoremap|cmap|
+|インサート(挿入)モード|inoremap|imap|
 
 END OF FILE

@@ -62,7 +62,7 @@ autocmd QuickFixCmdPost "grep" cwindow
 "##### Encoding
 "set encoding=japan
 "set fileencodings=cp932
-set fileencodings=iso-2022-jp,utf-8,cp932,euc-jp
+set fileencodings=utf-8,cp932,euc-jp,iso-2022-jp
 "set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis,cp932
 
 "###### Syntax
